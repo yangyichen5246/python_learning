@@ -1,7 +1,9 @@
-import requests
-url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
+def xxx(num):
+    if num >=1:
+       result=num * xxx(num-1)
+    else:
+        result =1
+    return result
 
-r = requests.get(url)
-print("Status code:",r.status_code)
-response_dict = r.json()
-print(response_dict.keys)
+aaaf = xxx(4)
+print(aaaf)
