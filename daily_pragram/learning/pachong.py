@@ -24,7 +24,7 @@
 #
 #
 # m_f_con_t cm_tit
-
+#
 import requests
 from bs4 import BeautifulSoup
 res = requests.get('https://news.sina.cn/gn?vt=4&pos=3')
@@ -38,9 +38,27 @@ for news in soup.select('.m_f_con_t'):
         print(h2)
 for news1 in soup.select('.m_f_con_add'):
     print(news)
-
-
-
+import chardet
+import pandas
 # res_1 = requests.get('https://mjs.sinaimg.cn/wap/custom_html/wap/20181015/5bc42f97c28ee.html')
 # soup_1= BeautifulSoup(res_1.text,'html.parser')
 # print(soup_1)
+
+
+# from urllib import request
+#
+# if __name__=='__main__':
+#     url = "https://news.sina.cn/gn?vt=4&pos=3/"
+#     rsp = request.urlopen(url)
+#     html = rsp.read()
+#     cs = chardet.detect(html)
+#     html = html.decode(cs.get("coding","utf-8"))
+#
+#
+#
+#     print(type(cs))
+#     print(cs)
+#     print(html)
+
+
+import  scarpy
